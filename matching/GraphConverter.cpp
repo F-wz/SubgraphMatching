@@ -4,7 +4,10 @@
 
 #include "graph/graph.h"
 
+
 int main(int argc, char** argv) {
+    using namespace subgraph_matching;
+
     std::string input_src_file_path(argv[1]);
     std::string output_dst_file_path(argv[2]);
 

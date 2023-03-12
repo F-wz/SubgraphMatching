@@ -8,6 +8,10 @@
 #include "graph/graph.h"
 #include "utility/QFliter.h"
 #include <vector>
+
+
+namespace subgraph_matching {
+
 class BuildTable {
 public:
     static void buildTables(const Graph* data_graph, const Graph* query_graph, ui** candidates, ui* candidates_count,
@@ -29,5 +33,6 @@ public:
 #endif
 };
 
+};
 
 #endif //SUBGRAPHMATCHING_BUILDTABLE_H

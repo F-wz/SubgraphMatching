@@ -1,5 +1,7 @@
 #include "util.hpp"
 
+namespace subgraph_matching {
+
 void quit()
 {
     system("pause");
@@ -122,3 +124,5 @@ bool edge_idpair_cmp(const Edge& a, const Edge& b)
     if(a.first == b.first) return a.second < b.second;
     else return a.first < b.first;
 }
+
+};

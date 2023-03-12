@@ -23,9 +23,10 @@
 
 #include "han/intersection_algos.hpp"
 
-
 using namespace std;
 using namespace std::chrono;
+
+namespace subgraph_matching {
 
 struct BSRSet {
     int *base_ = nullptr;
@@ -76,6 +77,8 @@ struct BSRGraph {
         }
         max_d_ = max_d;
     }
+};
+
 };
 
 #endif //SUBGRAPHMATCHING_QFLITER_H

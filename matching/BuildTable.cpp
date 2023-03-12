@@ -10,6 +10,8 @@
 BSRGraph*** BuildTable::qfliter_bsr_graph_;
 #endif
 
+namespace subgraph_matching {
+
 void BuildTable::buildTables(const Graph *data_graph, const Graph *query_graph, ui **candidates, ui *candidates_count,
                              Edges ***edge_matrix) {
     ui query_vertices_num = query_graph->getVerticesCount();
@@ -361,4 +363,4 @@ size_t BuildTable::computeMemoryCostInBytes(const Graph *query_graph, ui *candid
     return memory_cost_in_bytes;
 }
 
-
+};

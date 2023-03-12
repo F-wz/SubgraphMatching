@@ -11,6 +11,8 @@
 #include <queue>
 #include <bitset>
 
+namespace subgraph_matching {
+
 // Min priority queue.
 static auto extendable_vertex_compare = [](std::pair<std::pair<VertexID, ui>, ui> l, std::pair<std::pair<VertexID, ui>, ui> r) {
     if (l.first.second == 1 && r.first.second != 1) {
@@ -130,5 +132,6 @@ private:
                                                      const Graph *query_graph);
 };
 
+};
 
 #endif //SUBGRAPHMATCHING_EVALUATEQUERY_H

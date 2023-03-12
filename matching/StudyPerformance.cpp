@@ -18,6 +18,8 @@
 #define NANOSECTOSEC(elapsed_time) ((elapsed_time)/(double)1000000000)
 #define BYTESTOMB(memory_cost) ((memory_cost)/(double)(1024 * 1024))
 
+namespace subgraph_matching {
+
 size_t enumerate(Graph* data_graph, Graph* query_graph, Edges*** edge_matrix, ui** candidates, ui* candidates_count,
                 ui* matching_order, size_t output_limit) {
     static ui order_id = 0;
@@ -76,7 +78,12 @@ void spectrum_analysis(Graph* data_graph, Graph* query_graph, Edges*** edge_matr
     }
 }
 
+};
+
 int main(int argc, char** argv) {
+
+    using namespace subgraph_matching;
+    
     MatchingCommand command(argc, argv);
     std::string input_query_graph_file = command.getQueryGraphFilePath();
     std::string input_data_graph_file = command.getDataGraphFilePath();

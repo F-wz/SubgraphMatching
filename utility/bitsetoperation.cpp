@@ -4,6 +4,8 @@
 
 #include "bitsetoperation.h"
 
+namespace subgraph_matching {
+
 void BitsetOperation::setBitsetList(void *bitset, const uint32_t *list, uint32_t length) {
     uint64_t pos;
     const uint32_t *end = list + length;
@@ -175,3 +177,5 @@ uint32_t BitsetOperation::extractBitset(const uint64_t *bitset, uint32_t length,
     }
     return (uint32_t)outpos;
 }
+
+};

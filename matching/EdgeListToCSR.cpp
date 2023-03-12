@@ -10,7 +10,10 @@
 #include <chrono>
 #include <tuple>
 #include <random>
+
 using namespace std;
+
+namespace subgraph_matching {
 
 vector<pair<int, int>> GetEdgeList(string &input_file_path, int &max_ele) {
     vector<pair<int, int>> lines;
@@ -123,7 +126,12 @@ void WriteToOutputFiles(string &deg_output_file, string &adj_output_file, string
     cout << "finish write..." << std::endl;
 }
 
+}; // namespace subgraph_matching
+
 int main(int argc, char *argv[]) {
+
+    using namespace subgraph_matching;
+
     string input_file_path(argv[1]);
     string output_file_path(argv[2]);
     string num_labels(argv[3]);

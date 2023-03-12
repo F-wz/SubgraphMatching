@@ -8,6 +8,8 @@
 #define MM_STORE_SI_128 _mm_storeu_si128
 #endif
 
+namespace subgraph_matching {
+
 constexpr int cyclic_shift1 = _MM_SHUFFLE(0,3,2,1); //rotating right
 constexpr int cyclic_shift2 = _MM_SHUFFLE(2,1,0,3); //rotating left
 constexpr int cyclic_shift3 = _MM_SHUFFLE(1,0,3,2); //between
@@ -1286,3 +1288,5 @@ int offline_bsr_trans_uint(int *bases_a, int *states_a, int size_a, int *set_a)
     }
     return cnt;
 }
+
+};

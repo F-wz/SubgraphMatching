@@ -10,6 +10,8 @@
 #include <algorithm>
 #define INVALID_VERTEX_ID 100000000
 
+namespace subgraph_matching {
+
 bool
 FilterVertices::LDFFilter(const Graph *data_graph, const Graph *query_graph, ui **&candidates, ui *&candidates_count) {
     allocateBuffer(data_graph, query_graph, candidates, candidates_count);
@@ -1052,3 +1054,5 @@ FilterVertices::computeCandidatesFalsePositiveRatio(const Graph *data_graph, con
 
     return sum / query_vertices_count;
 }
+
+};

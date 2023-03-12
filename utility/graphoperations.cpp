@@ -6,6 +6,8 @@
 #include <memory.h>
 #include <queue>
 
+namespace subgraph_matching {
+
 void GraphOperations::getKCore(const Graph *graph, int *core_table) {
     int vertices_count = graph->getVerticesCount();
     int max_degree = graph->getGraphMaxDegree();
@@ -205,3 +207,5 @@ void GraphOperations::dfs(TreeNode *tree, VertexID cur_vertex, VertexID *dfs_ord
         dfs(tree, tree[cur_vertex].children_[i], dfs_order, count);
     }
 }
+
+};

@@ -6,6 +6,9 @@
 #define SUBGRAPHMATCHING_GRAPHOPERATIONS_H
 
 #include "graph/graph.h"
+
+namespace subgraph_matching {
+
 class GraphOperations {
 public:
     static void getKCore(const Graph *graph, int *core_table);
@@ -18,5 +21,6 @@ private:
     static void dfs(TreeNode* tree, VertexID cur_vertex, VertexID* dfs_order, ui& count);
 };
 
+};
 
 #endif //SUBGRAPHMATCHING_GRAPHOPERATIONS_H

@@ -3,6 +3,8 @@
 
 #include "utils/util.hpp"
 
+namespace subgraph_matching {
+
 // ScalarMerge:
 int intersect_scalarmerge_uint(int *set_a, int size_a,
             int *set_b, int size_b, int *set_c);
@@ -70,5 +72,7 @@ int hierainter_online_intersect_high16bit(uint16_t *par_a, int size_a,
 
 int offline_uint_trans_bsr(int *set_a, int size_a, int *bases_a, int *states_a);
 int offline_bsr_trans_uint(int *bases_a, int *states_a, int size_a, int *set_a);
+
+};
 #endif
 

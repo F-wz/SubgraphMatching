@@ -9,6 +9,8 @@
 
 #include "utility/pretty_print.h"
 
+namespace subgraph_matching {
+
 #if ENABLE_QFLITER == 1
 BSRGraph ***EvaluateQuery::qfliter_bsr_graph_;
 int *EvaluateQuery::temp_bsr_base1_ = nullptr;
@@ -1424,3 +1426,4 @@ void EvaluateQuery::computeAncestor(const Graph *query_graph, VertexID *order,
 }
 
 
+};

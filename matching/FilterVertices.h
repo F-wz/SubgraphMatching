@@ -8,6 +8,8 @@
 #include "graph/graph.h"
 #include <vector>
 
+namespace subgraph_matching {
+
 class FilterVertices {
 public:
     static bool LDFFilter(const Graph *data_graph, const Graph *query_graph, ui **&candidates, ui *&candidates_count);
@@ -59,5 +61,6 @@ private:
     static bool isCandidateSetValid(ui** &candidates, ui* &candidates_count, ui query_vertex_num);
 };
 
+};
 
 #endif //SUBGRAPHMATCHING_FILTERVERTICES_H

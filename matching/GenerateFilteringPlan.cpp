@@ -7,6 +7,8 @@
 #include <queue>
 #include <utility/graphoperations.h>
 
+namespace subgraph_matching {
+
 void GenerateFilteringPlan::generateTSOFilterPlan(const Graph *data_graph, const Graph *query_graph, TreeNode *&tree,
                                                    VertexID *&order) {
     VertexID start_vertex = selectTSOFilterStartVertex(data_graph, query_graph);
@@ -275,3 +277,5 @@ VertexID GenerateFilteringPlan::selectCECIStartVertex(const Graph *data_graph, c
 
     return start_vertex;
 }
+
+};

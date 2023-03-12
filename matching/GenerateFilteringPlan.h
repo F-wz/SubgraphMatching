@@ -9,6 +9,8 @@
 #include "graph/graph.h"
 #include "configuration/types.h"
 
+namespace subgraph_matching {
+
 class GenerateFilteringPlan {
 public:
     static void generateTSOFilterPlan(const Graph *data_graph, const Graph *query_graph, TreeNode *&tree,
@@ -26,5 +28,6 @@ private:
     static VertexID selectCECIStartVertex(const Graph *data_graph, const Graph *query_graph);
 };
 
+};
 
 #endif //SUBGRAPHMATCHING_GENERATEFILTERINGPLAN_H

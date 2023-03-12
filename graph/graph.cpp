@@ -9,6 +9,8 @@
 #include <chrono>
 #include <utility/graphoperations.h>
 
+namespace subgraph_matching {
+
 void Graph::BuildReverseIndex() {
     reverse_index_ = new ui[vertices_count_];
     reverse_index_offsets_= new ui[labels_count_ + 1];
@@ -364,3 +366,5 @@ void Graph::storeComparessedGraph(const std::string& degree_path, const std::str
     label_outputfile.close();
     label_outputfile.clear();
 }
+
+};

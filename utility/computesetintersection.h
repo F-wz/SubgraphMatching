@@ -10,6 +10,8 @@
 #include <immintrin.h>
 #include <x86intrin.h>
 
+namespace subgraph_matching {
+
 /*
  * Because the set intersection is designed for computing common neighbors, the target is uieger.
  */
@@ -69,5 +71,6 @@ public:
 #endif
 };
 
+};
 
 #endif //FSE_COMPUTESETINTERSECTION_H

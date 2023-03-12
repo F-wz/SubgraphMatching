@@ -7,6 +7,9 @@
 
 #include "graph/graph.h"
 #include <vector>
+
+namespace subgraph_matching {
+
 class GenerateQueryPlan {
 public:
     static void generateGQLQueryPlan(const Graph *data_graph, const Graph *query_graph, ui *candidates_count,
@@ -61,5 +64,6 @@ private:
     static void updateValidVertices(const Graph* query_graph, VertexID query_vertex, std::vector<bool>& visited, std::vector<bool>& adjacent);
 };
 
+};
 
 #endif //SUBGRAPHMATCHING_GENERATEQUERYPLAN_H

@@ -10,6 +10,8 @@
 #include <algorithm>
 #include <utility/graphoperations.h>
 
+namespace subgraph_matching {
+
 void GenerateQueryPlan::generateGQLQueryPlan(const Graph *data_graph, const Graph *query_graph, ui *candidates_count,
                                              ui *&order, ui *&pivot) {
      /**
@@ -1124,3 +1126,5 @@ void GenerateQueryPlan::checkQueryPlanCorrectness(const Graph *query_graph, ui *
         visited_vertices[u] = true;
     }
 }
+
+};

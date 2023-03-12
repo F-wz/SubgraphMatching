@@ -5,6 +5,8 @@
 #include "computesetintersection.h"
 #include <cstdint>
 
+namespace subgraph_matching {
+
 void ComputeSetIntersection::ComputeCandidates(const VertexID* larray, const ui l_count,
                                                const VertexID* rarray, const ui r_count,
                                                VertexID* cn, ui &cn_count) {
@@ -1120,3 +1122,5 @@ const ui ComputeSetIntersection::BinarySearch(const VertexID *src, const ui begi
     return (ui)offset_end;
 }
 #endif
+
+};

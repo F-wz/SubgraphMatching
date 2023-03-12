@@ -11,6 +11,8 @@
 #include "configuration/types.h"
 #include "configuration/config.h"
 
+namespace subgraph_matching {
+
 /**
  * A graph is stored as the CSR format.
  */
@@ -202,5 +204,6 @@ public:
     void buildCoreTable();
 };
 
+};
 
 #endif //SUBGRAPHMATCHING_GRAPH_H

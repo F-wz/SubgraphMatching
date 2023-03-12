@@ -15,6 +15,7 @@
 #include <unistd.h>
 #include <sys/time.h>
 
+namespace subgraph_matching {
 
 #define SIMD_STATE 4 // 0:none, 2:scalar2x, 4:simd4x
 #define SIMD_MODE 1 // 0:naive 1: filter
@@ -70,4 +71,6 @@ void save_graph(const std::string path, const EdgeVector& edge_vec);
 std::vector<int> load_vertex_order(const std::string path);
 void save_newid(const std::string path, std::vector<int> org2newid);
 bool edge_idpair_cmp(const Edge& a, const Edge& b);
+
+};
 #endif

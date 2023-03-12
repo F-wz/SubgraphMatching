@@ -25,6 +25,9 @@
 #include <sstream>
 #include <iomanip>
 
+
+namespace subgraph_matching {
+
 template< typename T >
 std::string int_to_hex( T i )
 {
@@ -468,6 +471,7 @@ bucket_print(const T &m, typename T::size_type n) {
     return pretty_print::bucket_print_wrapper<T>(m, n);
 }
 
+};
 
 // Main magic entry point: An overload snuck into namespace std.
 // Can we do better?
@@ -476,12 +480,11 @@ namespace std {
     // Prints a container to the stream using default delimiters
 
     template<typename T, typename TChar, typename TCharTraits>
-    inline typename enable_if<::pretty_print::is_container<T>::value,
+    inline typename enable_if<subgraph_matching::pretty_print::is_container<T>::value,
             basic_ostream<TChar, TCharTraits> &>::type
     operator<<(basic_ostream<TChar, TCharTraits> &stream, const T &container) {
-        return stream << ::pretty_print::print_container_helper<T, TChar, TCharTraits>(container);
+        return stream << subgraph_matching::pretty_print::print_container_helper<T, TChar, TCharTraits>(container);
     }
 }
-
 
 #endif  // H_PRETTY_PRINT

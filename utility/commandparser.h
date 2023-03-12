@@ -8,6 +8,9 @@
 #include <string>
 #include <algorithm>
 #include <vector>
+
+namespace subgraph_matching {
+
 class CommandParser {
 private:
     std::vector<std::string> tokens_;
@@ -18,5 +21,6 @@ public:
     bool commandOptionExists(const std::string &option) const;
 };
 
+};
 
 #endif //SUBGRAPHMATCHING_COMMANDPARSER_H

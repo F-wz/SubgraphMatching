@@ -9,11 +9,11 @@ set(SUBGRAPH_MATCHING_FILE_LIST
 set(SUBGRAPH_MATCHING_GRAPH_CONVERTER_FILE_LIST
         GraphConverter.cpp)
 
-add_library(sub_graph_matching STATIC ${SUBGRAPH_MATCHING_FILE_LIST})
-target_link_libraries(sub_graph_matching subgraph_matching_graph subgraph_matching_utility)
+add_library(sub_graph_matching_algorithems STATIC ${SUBGRAPH_MATCHING_FILE_LIST})
+target_link_libraries(sub_graph_matching_algorithems subgraph_matching_graph subgraph_matching_utility)
 
 add_executable(SubgraphMatching.out StudyPerformance.cpp)
-target_link_libraries(SubgraphMatching.out subgraph_matching_graph subgraph_matching_utility sub_graph_matching)
+target_link_libraries(SubgraphMatching.out subgraph_matching_graph subgraph_matching_utility sub_graph_matching_algorithems)
 
 add_executable(GraphConverter.out ${SUBGRAPH_MATCHING_GRAPH_CONVERTER_FILE_LIST})
 target_link_libraries(GraphConverter.out subgraph_matching_graph subgraph_matching_utility)

@@ -15,7 +15,10 @@
 #include <chrono>
 #include <tuple>
 #include <random>
+
 using namespace std;
+
+namespace subgraph_matching {
 
 void write_csr(string& deg_output_file, string &adj_output_file, vector<pair<int, int>> &lines, unsigned int vertex_num) {
     auto edge_num = lines.size();
@@ -105,7 +108,12 @@ void read_csr(string& degree_bin_path, string& adj_bin_path, vector<unsigned int
     adj_file.clear();
 }
 
+}; // namspace subgraph_matching
+
 int main(int argc, char *argv[]) {
+
+    using namespace subgraph_matching;
+    
     string input_edge_prob(argv[1]);
     string input_degree_bin_path(argv[2]);
     string input_adj_bin_path(argv[3]);

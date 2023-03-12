@@ -7,6 +7,8 @@
 
 #include <cstdint>
 
+namespace subgraph_matching {
+
 class BitsetOperation {
 public:
     static uint32_t extractBitset(const uint64_t *bitset, uint32_t length, uint32_t* output);
@@ -22,5 +24,6 @@ public:
     static bool binarySearch(const uint32_t *src, uint32_t begin, uint32_t end, uint32_t target);
 };
 
+};
 
 #endif //SUBGRAPHMATCHING_BITSETOPERATION_H

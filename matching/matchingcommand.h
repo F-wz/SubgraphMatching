@@ -8,6 +8,9 @@
 #include "utility/commandparser.h"
 #include <map>
 #include <iostream>
+
+namespace subgraph_matching {
+    
 enum OptionKeyword {
     Algorithm = 0,          // -a, The algorithm name, compulsive parameter
     QueryGraphFile = 1,     // -q, The query graph file path, compulsive parameter
@@ -97,5 +100,6 @@ public:
     }
 };
 
+};
 
 #endif //SUBGRAPHMATCHING_MATCHINGCOMMAND_H

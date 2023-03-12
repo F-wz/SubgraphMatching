@@ -4,6 +4,8 @@
 
 #include "matchingcommand.h"
 
+namespace subgraph_matching {
+
 MatchingCommand::MatchingCommand(const int argc, char **argv) : CommandParser(argc, argv) {
     // Initialize options value
     options_key[OptionKeyword::Algorithm] = "-a";
@@ -70,3 +72,5 @@ void MatchingCommand::processOptions() {
     // CSR file path
     options_value[OptionKeyword::CSRFilePath] = getCommandOption(options_key[OptionKeyword::CSRFilePath]);
 }
+
+};

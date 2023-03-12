@@ -8,6 +8,8 @@
 #include <cstdint>
 #include <stdlib.h>
 
+namespace subgraph_matching {
+
 typedef unsigned int ui;
 
 typedef uint32_t VertexID;
@@ -83,6 +85,8 @@ public:
         delete[] offset_;
         delete[] edge_;
     }
+};
+
 };
 
 #endif //SUBGRAPHMATCHING_TYPES_H
