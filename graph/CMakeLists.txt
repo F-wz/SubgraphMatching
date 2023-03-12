@@ -1,5 +1,1 @@
-set(GRAPH_SRC
-        graph.cpp)
-
-add_library(graph SHARED
-        ${GRAPH_SRC})
+add_library(subgraph_matching_graph STATIC graph.cpp)

@@ -1,26 +1,22 @@
 set(SUBGRAPH_MATCHING_FILE_LIST
         matchingcommand.cpp
-        matchingcommand.h
         FilterVertices.cpp
-        FilterVertices.h
         BuildTable.cpp
-        BuildTable.h
         GenerateQueryPlan.cpp
-        GenerateQueryPlan.h
         EvaluateQuery.cpp
-        EvaluateQuery.h
-        GenerateFilteringPlan.cpp
-        GenerateFilteringPlan.h
-        StudyPerformance.cpp)
+        GenerateFilteringPlan.cpp)
 
-set(GRAPH_CONVERTER_FILE_LIST
+set(SUBGRAPH_MATCHING_GRAPH_CONVERTER_FILE_LIST
         GraphConverter.cpp)
 
-add_executable(SubgraphMatching.out ${SUBGRAPH_MATCHING_FILE_LIST})
-target_link_libraries(SubgraphMatching.out graph utility)
+add_library(sub_graph_matching STATIC ${SUBGRAPH_MATCHING_FILE_LIST})
+target_link_libraries(sub_graph_matching subgraph_matching_graph subgraph_matching_utility)
 
-add_executable(GraphConverter.out ${GRAPH_CONVERTER_FILE_LIST})
-target_link_libraries(GraphConverter.out graph utility)
+add_executable(SubgraphMatching.out StudyPerformance.cpp)
+target_link_libraries(SubgraphMatching.out subgraph_matching_graph subgraph_matching_utility sub_graph_matching)
+
+add_executable(GraphConverter.out ${SUBGRAPH_MATCHING_GRAPH_CONVERTER_FILE_LIST})
+target_link_libraries(GraphConverter.out subgraph_matching_graph subgraph_matching_utility)
 
 add_executable(EdgeListConverter.out EdgeListToCSR.cpp)
 add_executable(ReassignLabel ReassignLabel.cpp)

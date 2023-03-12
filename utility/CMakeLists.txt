@@ -1,14 +1,9 @@
-set(UTILITY_SRC
+set(SUBGRAPH_MATCHING_UTILITY_SRC
         graphoperations.cpp
         commandparser.cpp
-        commandparser.h
-        computesetintersection.h
         computesetintersection.cpp
         bitsetoperation.cpp
-        bitsetoperation.h
-        QFliter.h
         han/intersection_algos.cpp
         han/utils/util.cpp)
 
-add_library(utility SHARED
-        ${UTILITY_SRC})
+add_library(subgraph_matching_utility STATIC ${SUBGRAPH_MATCHING_UTILITY_SRC})
