@@ -6,7 +6,7 @@
 #define SUBGRAPHMATCHING_GENERATEFILTERINGPLAN_H
 
 
-#include "graph/graph.h"
+#include "subgraph_matching_graph/graph.h"
 #include "configuration/types.h"
 
 namespace subgraph_matching {

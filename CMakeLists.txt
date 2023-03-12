@@ -8,6 +8,6 @@ include_directories(
 set(CMAKE_CXX_FLAGS
         "${CMAKE_CXX_FLAGS} -std=c++11 -O3 -g -Wall -march=native -pthread")
 
-add_subdirectory(graph)
+add_subdirectory(subgraph_matching_graph)
 add_subdirectory(matching)
 add_subdirectory(utility)

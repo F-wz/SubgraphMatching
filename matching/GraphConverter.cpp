@@ -2,7 +2,7 @@
 // Created by ssunah on 10/29/19.
 //
 
-#include "graph/graph.h"
+#include "subgraph_matching_graph/graph.h"
 
 
 int main(int argc, char** argv) {

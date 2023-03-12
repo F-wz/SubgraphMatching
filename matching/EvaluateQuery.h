@@ -5,7 +5,7 @@
 #ifndef SUBGRAPHMATCHING_EVALUATEQUERY_H
 #define SUBGRAPHMATCHING_EVALUATEQUERY_H
 
-#include "graph/graph.h"
+#include "subgraph_matching_graph/graph.h"
 #include "utility/QFliter.h"
 #include <vector>
 #include <queue>

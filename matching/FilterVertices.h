@@ -5,7 +5,7 @@
 #ifndef SUBGRAPHMATCHING_FILTERVERTICES_H
 #define SUBGRAPHMATCHING_FILTERVERTICES_H
 
-#include "graph/graph.h"
+#include "subgraph_matching_graph/graph.h"
 #include <vector>
 
 namespace subgraph_matching {

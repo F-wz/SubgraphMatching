@@ -5,7 +5,7 @@
 #ifndef SUBGRAPHMATCHING_GRAPHOPERATIONS_H
 #define SUBGRAPHMATCHING_GRAPHOPERATIONS_H
 
-#include "graph/graph.h"
+#include "subgraph_matching_graph/graph.h"
 
 namespace subgraph_matching {
 
